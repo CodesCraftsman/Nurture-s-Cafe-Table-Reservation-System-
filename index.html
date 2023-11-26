@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Checkout example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <style>
+    * {
+      margin: 0px;
+
+    }
+
+    .r0 {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to right,#f4fd3f, #791515);
+      text-align: center;
+      font-family: cursive;
+    }
+
+    .r1 {
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(to right,#f4fd3f, #791515);
+    }
+
+    .r2 {
+      position: relative;
+      top: 40px;
+      left: 50px;
+      width: 26%;
+      height: 400px;
+      margin: 3%;
+      float: left;
+      border-radius: 10px;
+    }
+
+    .img1 {
+      width: 100%;
+      height: max-content;
+      border-radius: 10px;
+    }
+
+    .btn {
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .head1 {
+      font-size: 80px;
+    }
+
+    .head2 {
+      font-size: 20px;
+    }
+
+    .dontwait {
+      background-image: url('waiter.jpg');
+      height: 700px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: 1500px 700px;
+    }
+
+    .iim1 {
+      width: 200px;
+      height: 120px;
+    }
+
+    .btn1 {
+      text-align: center;
+      text-decoration: 10px;
+    }
+
+    .teaser {
+      float: left;
+      margin: 10px;
+      background: linear-gradient(to right,#f4fd3f, #791515);
+    }
+
+    .iiimg {
+      float: left;
+      margin: 30px;
+      margin-left: 50px;
+      border-radius: 10px;
+    }
+
+    .offer {
+      border-radius: 10px;
+    }
+
+    .d-block {
+      width: 100%;
+      height: 500px;
+    }
+
+    .meal {
+      color: white;
+      font-size: 60px;
+      text-align: center;
+    }
+
+    .expbtn {
+      position: relative;
+      bottom: 5px;
+    }
+
+    .card1 {
+      background-color: bisque;
+      width: 100%;
+      padding: 20px ;
+    }
+
+    .footer {
+      width: 100%;
+      height: 1000px;
+      position: absolute;
+    }
+
+    .onm {
+      display:grid;
+      grid-template-columns: 3rem,3rem,3rem;
+      width: 100%;
+      float: left;
+      margin: 0;
+      background-color: #8ecdff;
+    }
+  </style>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+      <div class="container-fluid ">
+        <a class="navbar-brand text-light" href="about.html"><img src="reallogo.png" width="70px" height="50px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="contact.HTML">Contact</a>
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="hotel3.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Best Ambience You Like It</h5>
+          <p>We are committed to provide a feel good experience to all our clients</p>
+          <button class="btn btn-success"><a class="nav-link text-light" href="reservetable.html">Reserve
+              Table</a></button>
+          <button class="btn btn-primary"><a class="nav-link text-light" href="registrationform.html">Login</a></button>
+          <button class="btn btn-danger"><a class="nav-link text-light" href="specialoffer.html">Special
+              Offer</a></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="hotal2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Explore Diffrent Culture and Traditions</h5>
+          <p>Try diffrent dishes of all over world</p>
+          <button class="btn btn-success"><a class="nav-link text-light" href="reservetable.html">Reserve
+              Table</a></button>
+          <button class="btn btn-primary"><a class="nav-link text-light" href="about.html">Reserve Table</a></button>
+          <button class="btn btn-danger"><a class="nav-link text-light" href="about.html">Reserve Table</a></button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="restorentatnight2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Gives You Best Experiences </h5>
+          <p>We have a big family of happy and satesfied members</p>
+          <button class="btn btn-success"><a class="nav-link text-light" href="reservetable.html">Reserve
+              Table</a></button>
+          <button class="btn btn-primary"><a class="nav-link text-light" href="about.html">Login</a></button>
+          <button class="btn btn-danger"><a class="nav-link text-light" href="specialoffer.html">Special
+              Offers</a></button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <div class="r0">
+    <h1 style="font-size: 50px;">RED CHILLI</h1>
+    <p style="font-size: 25px;">TEST DELIGHT</p>
+  </div>
+  <div class="r1">
+    <div class="r2"><img class="img1" src="hotaldinview.jpg" alt=""><br>
+      <center><button class="btn btn-danger">CHINESE SECTION</button></a></center>
+    </div>
+    <div class="r2"><img class="img1" src="s1.webp" alt=""><br>
+      <center><button class="btn btn-danger">INDIAN SECTION</button></a></center>
+    </div>
+    <div class="r2"><img class="img1" src="food.jpeg" alt=""><br>
+      <center><button class="btn btn-danger">ITALIAN SECTION</button></a></center>
+    </div>
+  </div>
+  
+  <div class="container-fluid card1 mx-2">
+    <h1>EXPLORE OUR SPECIAL'S</h1>
+  </div><hr>
+    <div class="container" style="background: linear-gradient(to right,#f4fd3f, #791515);">  
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="lunch2.jfif" aria-hidden="true">
+          <div class="card-body">
+            <h5 class="card-title">₹4500</h5>
+            <p class="card-text">Happiness gift card-Treat fo four</p>
+            <a href="thanku.html" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card " style="width: 18rem;">
+          <img src="lunch1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">₹2,200</h5>
+            <p class="card-text">Happiness gift card-Treat fo two</p>
+            <a href="thanku.html" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card " style="width: 18rem;">
+          <img src="buffet.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">₹10,000</h5>
+            <p class="card-text">Spread happiness by a click</p>
+            <a href="thanku.html" class="btn btn-primary">Explore More</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!--<div class="col-sm-3">
+    <div class="card " style="width: 18rem;">
+      <img src="glass.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">₹8,000</h5>
+        <p class="card-text">Happy family treate(6-person)</p>
+        <a href="#" class="btn btn-primary">Buy Now</a>
+      </div>
+    </div>
+  </div>-->
+      <hr>
+
+
+      <div class="row ">
+        <div class="col-sm-12 my-10">
+          <h1 class="head1">Don't West Time In Rush.<br>Always Be Smart</h1>
+          <p class="head2">We provide a special facility.It may help you for not to getting late for anyway.you can
+            choose
+            youre own table and book it </p>
+          <hr>
+          <a href="reservetable.html" class="btn btn-info">BOOK TABLE</a>
+        </div>
+      </div>
+      <div class="dontwait">
+        <h1 style="font-size: 130PX; color: whitesmoke; text-align: center;">QUICK ARRENGEMENT</h1><br>
+        <h1> <span class="meal"> &nbsp; GET YOURE MEAL INSTANTELY</span></h1><br>
+
+        <div class="container-fluid btn1 exobtn">
+          <div class="container">
+            <div class="btn btn-primary ">EXPLORE NOW</div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="container-fluid my-2">
+        <h2> POOL PARTY-Enjoy youre meal in swmming pool.<span class="badge bg-secondary">New</span></h2>
+      </div>
+    </div>
+  
+
+
+  <div class="d-flex justify-content-center bg-secondary">
+
+    <div class="col-sm-6 my-2">
+      <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <img class="iim1" src="reallogo.png" width="400px" height="500px">
+            <h2>BOOK YOURE SLOT</h2>
+            <p class="lead">Don’t wait in a line to enjoy your meal. Reserve a table in advance with us.</p>
+          </div>
+
+
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Reserve youre table</h4>
+            <form class="needs-validation" novalidate="">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="date" class="form-label">Date of lunch/Dinner</label>
+                  <input type="date" class="form-control" id="date" placeholder="" required="DD/MM/YY">
+                  <div class="invalid-feedback">
+                    Please enter date
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="time" class="form-label">Time of lunch/dinner</label>
+                  <input type="time" class="form-control" id="date" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Please enter date
+                  </div>
+                </div>
+
+
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" required="">
+                    <option value="">India</option>
+                    <option>Nepal</option>
+                    <option>turky</option>
+                    <option>United States</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                  <select class="form-select" id="state" required="">
+                    <option value="">Uttar Pradesh</option>
+                    <option value="">Madhya Pradesh</option>
+                    <option value="">Delhi</option>
+                    <option value="">Kashmir</option>
+                    <option value="">Washington</option>
+                    <option value="">Kathmandu</option>
+                    <option value="">Ankara</option>
+                    <option>California</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Are you have Prime Membership</label>
+              </div>
+
+              <hr class="my-4">
+
+              <h4 class="mb-3">Payment</h4>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                  <label class="form-check-label" for="credit">Credit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                  <label class="form-check-label" for="debit">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+                  <label class="form-check-label" for="phonepay">UPI ID</label>
+                </div>
+              </div>
+
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+
+
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Confirm youre Table
+
+                </button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  </div><br><br>
+  <hr>
+  <div class="teaser ">
+    <h1>What's on Red Chilli-</h1>
+    <br>
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="hawai.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="cuttec.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="biggerbutter.png" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="biryani.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="veg.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="gang.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="happy.png" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="weekend.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="weekend2.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="weekend3.jpg" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="hmonday.png" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="birthday.png" alt=""></a></div>
+
+    <div class="iiimg"><a href="specialoffer.html"><img class="offer" src="unlimit.jpg" alt=""></a></div>
+  </div><br>
+  <div class="onm0"><h1>TODAY'S SPECIAL-</h1><br>
+   <a href="specialoffer.html"><img src="Student.jpg" alt=""></a>
+   <a href="specialoffer.html"><img src="Student.jpg" alt=""></a>
+  <a href="specialoffer.html"><img src="Student.jpg" alt=""></a>
+  </div>
+   <hr>
+  <div class="onm">
+    <div class="container--fluid">
+      <footer class="my-10 pt-5 text-muted text-center text-small footer">
+        <p class="mb-1">© 1946–2022 Read Chilli</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="thanku.html">Privacy</a></li>
+          <li class="list-inline-item"><a href="thanku.html">Terms</a></li>
+          <li class="list-inline-item"><a href="contact.HTML">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <script src="form-validation.js"></script>
+  <br>
+</body>
+
+</html>

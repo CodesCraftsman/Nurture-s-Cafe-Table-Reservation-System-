@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>login</title>
+    <style>
+        table {
+            width: 50%;
+            height: 500px;
+            background-color: aqua;
+
+        }
+        input{
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input[type=submit]
+    {
+        background-color: blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="align: center;">
+    <table border="5px">
+        <form action="/action.php" method="get" name="'reg.form">
+            <tr>
+                <td>NAME:<br><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>EMAIL:<br><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>MOBILE NO.:<br><input type="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td>LOCATION:<br><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>PASSWORD:<br><input type="password" name="pass"></td>
+            </tr>
+            <td><input type="submit" value="save"></td>
+        </form>
+    </table>
+    </div>
+    <script>
+        function validate() {
+            if (document.reg.form.text.value == " ") {
+                alert("Please enter youre name")
+                return false
+            }
+        }
+        if (document.reg.form.email.value == " ") {
+            alert("Please enter youre email")
+            return false
+        }
+        if (document.reg.form.phone.value == " ") {
+            alert("Please enter youre phone")
+            return false
+        }
+        if (document.reg.form.address.value == " ") {
+            alert("Please enter youre location")
+            return false
+        }
+        if (document.reg.form.password.value == " ") {
+            alert("Please enter youre password")
+            return false
+        }
+    </script>
+    <form action="/action.php" home="reg.form" onsubmit="return(validate())">
+</body>
+
+</html>
